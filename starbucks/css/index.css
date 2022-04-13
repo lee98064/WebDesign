@@ -1,0 +1,104 @@
+img {
+  width: 100%;
+}
+
+.navbar {
+  padding: 60px 18% 0% 18%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.navbar .logo {
+  width: 100px;
+  height: 100px;
+}
+
+.navbar .navbar-item {
+  list-style: none;
+}
+
+.navbar .navbar-item li {
+  display: inline-block;
+}
+
+.main {
+  padding: 0px 15%;
+}
+
+.main .bg {
+  position: absolute;
+  z-index: -1;
+  top: -32%;
+  left: 38%;
+  height: 700px;
+  width: 700px;
+  background-color: #E5F3EF;
+  border-radius: 50%;
+}
+
+.main .big-title {
+  text-align: right;
+  margin-bottom: 120px;
+}
+
+.main .big-title h1 {
+  color: #008E65;
+  text-align: right;
+  font-weight: 900;
+  font-size: 4rem;
+  line-height: 1.2em;
+}
+
+.main .product {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+.main .product .card {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  width: 100%;
+  background-color: #E9E8E4;
+  border-radius: 30px;
+  margin-right: 10px;
+  margin-left: 10px;
+  padding: 35px;
+  position: relative;
+  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+}
+
+.main .product .card .card-img {
+  display: block;
+  margin: auto;
+  width: 100%;
+  position: relative;
+  top: -40%;
+  margin-bottom: -130px;
+}
+
+.main .product .card .card-title {
+  color: #A2988C;
+  font-size: 1.8em;
+  font-weight: 700;
+  margin-bottom: 30px;
+}
+
+.main .product .card .card-body {
+  color: #BEB4A5;
+  font-size: 1.4em;
+}
+/*# sourceMappingURL=index.css.map */
