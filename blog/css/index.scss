@@ -9,11 +9,19 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 100;
+  background-color: transparent;
   .navbar {
     padding: 40px 40px 20px 40px;
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    .logo {
+      font-size: 3em;
+      color: #fff;
+    }
+
     .navbar-list {
       list-style: none;
       .navbar-item {
@@ -75,7 +83,7 @@
       background-color: #251c19;
       color: #fff;
       text-decoration: none;
-      padding: 2px 5px;
+      padding: 10px 25px;
       transition: 0.2s;
       font-size: 1.5em;
       white-space: nowrap;

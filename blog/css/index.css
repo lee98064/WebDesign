@@ -9,6 +9,8 @@
   top: 0;
   right: 0;
   left: 0;
+  z-index: 100;
+  background-color: transparent;
 }
 
 .header .navbar {
@@ -22,6 +24,11 @@
   -webkit-box-align: center;
       -ms-flex-align: center;
           align-items: center;
+}
+
+.header .navbar .logo {
+  font-size: 3em;
+  color: #fff;
 }
 
 .header .navbar .navbar-list {
@@ -102,7 +109,7 @@
   background-color: #251c19;
   color: #fff;
   text-decoration: none;
-  padding: 2px 5px;
+  padding: 10px 25px;
   -webkit-transition: 0.2s;
   transition: 0.2s;
   font-size: 1.5em;
