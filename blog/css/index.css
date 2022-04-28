@@ -202,7 +202,9 @@
 
 .main-2 {
   min-height: 50vh;
-  background-color: #fff;
+  background-image: url("../img/bg-0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
