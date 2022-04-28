@@ -242,11 +242,13 @@
   background-size: cover;
   background-repeat: no-repeat;
   padding: 100px 100px;
+
   .about {
     min-height: inherit;
     display: flex;
     justify-content: center;
     align-items: center;
+
     .about-title {
       text-align: end;
       color: #202020;
@@ -262,6 +264,7 @@
         line-height: 1.4em;
         margin-bottom: 30px;
       }
+
       .about-btn {
         background-color: #57434f;
         color: #fff;
@@ -281,4 +284,45 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .subseribe {
+    padding: 40px 30px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 20vh;
+    min-width: 50vw;
+    background-color: #ececec;
+
+    .subseribe-title {
+      font-size: 2.5em;
+      font-weight: 600;
+      margin-bottom: 20px;
+    }
+
+    .subseribe-sub-title {
+      font-size: 1em;
+      margin-bottom: 50px;
+    }
+
+    .subseribe-form {
+      .subseribe-form-input {
+        border: none;
+        outline: none;
+        background-color: #fff;
+        padding: 10px 20px;
+      }
+    }
+
+  }
+}
+
+.main-6 {
+  min-height: 50vh;
+
+
 }

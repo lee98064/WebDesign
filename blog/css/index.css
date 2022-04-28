@@ -344,5 +344,56 @@
   background-size: cover;
   background-repeat: no-repeat;
   background-attachment: fixed;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.main-5 .subseribe {
+  padding: 40px 30px;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  min-height: 20vh;
+  min-width: 50vw;
+  background-color: #ececec;
+}
+
+.main-5 .subseribe .subseribe-title {
+  font-size: 2.5em;
+  font-weight: 600;
+  margin-bottom: 20px;
+}
+
+.main-5 .subseribe .subseribe-sub-title {
+  font-size: 1em;
+  margin-bottom: 50px;
+}
+
+.main-5 .subseribe .subseribe-form .subseribe-form-input {
+  border: none;
+  outline: none;
+  background-color: #fff;
+  padding: 10px 20px;
+}
+
+.main-6 {
+  min-height: 50vh;
 }
 /*# sourceMappingURL=index.css.map */
