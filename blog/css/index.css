@@ -2,7 +2,7 @@
 * {
   -webkit-box-sizing: border-box;
           box-sizing: border-box;
-  font-family: 'Noto Sans TC', sans-serif;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .header {
@@ -82,7 +82,7 @@
 }
 
 .main .left::before {
-  content: '';
+  content: "";
   position: absolute;
   -webkit-transform: rotate(180deg);
           transform: rotate(180deg);
@@ -95,7 +95,7 @@
 }
 
 .main .left::after {
-  content: 'WELCOME';
+  content: "WELCOME";
   position: absolute;
   -webkit-transform: rotate(270deg);
           transform: rotate(270deg);
@@ -257,7 +257,7 @@
 }
 
 .main-3 .gallery .item .item-title::before {
-  content: '';
+  content: "";
   position: absolute;
   height: 8px;
   width: 100px;
@@ -294,6 +294,48 @@
 
 .main-4 {
   min-height: 50vh;
+  background-image: url("../img/bg-0.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 100px 100px;
+}
+
+.main-4 .about {
+  min-height: inherit;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-4 .about .about-title {
+  text-align: end;
+  color: #202020;
+  font-size: 8em;
+  line-height: 0.6em;
+  margin-right: 40px;
+  margin-bottom: 5%;
+}
+
+.main-4 .about .about-content p {
+  font-size: 1.8em;
+  line-height: 1.4em;
+  margin-bottom: 30px;
+}
+
+.main-4 .about .about-content .about-btn {
+  background-color: #57434f;
+  color: #fff;
+  outline: none;
+  border: none;
+  cursor: pointer;
+  font-size: 1.2em;
+  padding: 10px 40px;
 }
 
 .main-5 {
