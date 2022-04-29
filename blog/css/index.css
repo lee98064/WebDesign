@@ -457,7 +457,7 @@
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  padding: 70px 150px 40px 150px;
+  padding: 40px 150px 40px 150px;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -468,18 +468,29 @@
 }
 
 .footer .top {
-  display: -ms-grid;
-  display: grid;
-  -ms-grid-columns: (1fr)[3];
-      grid-template-columns: repeat(3, 1fr);
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-pack: distribute;
+      justify-content: space-around;
+  margin-bottom: 100px;
 }
 
 .footer .top .top-title {
   color: #fff;
-  font-size: 4em;
+  font-size: 6em;
+  line-height: 0.7em;
+  position: relative;
+}
+
+.footer .top .top-title::after {
+  content: '';
+  position: absolute;
+  height: 6px;
+  background-color: #fff;
+  top: 23%;
+  left: 45%;
+  right: 25%;
 }
 
 .footer .top .top-link {
@@ -487,15 +498,66 @@
 }
 
 .footer .top .top-link > li {
+  position: relative;
   color: #fff;
+  font-style: italic;
+  font-size: 1.2em;
+  margin-bottom: 25px;
+  cursor: pointer;
+}
+
+.footer .top .top-link > li::after {
+  content: '';
+  position: absolute;
+  right: 30%;
+  left: 0;
+  bottom: -8px;
+  height: 1px;
+  background-color: rgba(255, 255, 255, 0.8);
+}
+
+.footer .top .social .social-icon {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  list-style: none;
+  color: #fff;
+  margin-bottom: 20px;
+}
+
+.footer .top .social .social-icon > li {
+  display: -ms-grid;
+  display: grid;
+  place-items: center;
+  height: 30px;
+  width: 30px;
+  margin-right: 10px;
+  border-radius: 50%;
+  border: 2px solid #fff;
 }
 
 .footer .top .social .social-search {
+  position: relative;
+}
+
+.footer .top .social .social-search .social-search-icon {
+  position: absolute;
+  top: 50%;
+  left: 10px;
+  -webkit-transform: translateY(-50%);
+          transform: translateY(-50%);
+  color: #fff;
+}
+
+.footer .top .social .social-search .social-search-input {
   outline: none;
   border: 1px solid #fff;
   background-color: transparent;
   color: #fff;
-  padding: 10px 20px;
+  padding: 10px 20px 10px 40px;
 }
 
 .footer .bottom {
