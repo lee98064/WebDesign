@@ -77,8 +77,8 @@
   right: -8%;
   top: 20%;
   width: 85%;
-  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
-          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
 }
 
 .main .left::before {
@@ -373,6 +373,8 @@
   min-height: 20vh;
   min-width: 50vw;
   background-color: #ececec;
+  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
 }
 
 .main-5 .subseribe .subseribe-title {
@@ -382,18 +384,75 @@
 }
 
 .main-5 .subseribe .subseribe-sub-title {
-  font-size: 1em;
-  margin-bottom: 50px;
+  font-size: 1.1em;
+  margin-bottom: 40px;
 }
 
 .main-5 .subseribe .subseribe-form .subseribe-form-input {
   border: none;
   outline: none;
   background-color: #fff;
-  padding: 10px 20px;
+  padding: 20px 30px;
+  font-size: 1.2em;
+}
+
+.main-5 .subseribe .subseribe-form .subseribe-form-btn {
+  padding: 20px 40px;
+  border: none;
+  font-size: 1.2em;
+  background-color: #57434f;
+  color: #fff;
+  cursor: pointer;
 }
 
 .main-6 {
-  min-height: 50vh;
+  min-height: 60vh;
+  background-color: #fff;
+  padding: 100px 200px;
+}
+
+.main-6 .photos {
+  position: relative;
+  min-height: inherit;
+  display: -ms-grid;
+  display: grid;
+  -ms-grid-columns: (1fr)[4];
+      grid-template-columns: repeat(4, 1fr);
+  -webkit-column-gap: 20px;
+          column-gap: 20px;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.main-6 .photos img {
+  width: 100%;
+  -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+          box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+}
+
+.main-6 .photos .photo-top-title,
+.main-6 .photos .photo-bottom-title {
+  position: absolute;
+  font-size: 7em;
+  font-size: 900;
+}
+
+.main-6 .photos .photo-top-title {
+  top: 0;
+  left: -30px;
+}
+
+.main-6 .photos .photo-bottom-title {
+  bottom: 25px;
+  right: -30px;
+}
+
+.footer {
+  min-height: 30vh;
+  background-color: #3c3c3c;
 }
 /*# sourceMappingURL=index.css.map */
