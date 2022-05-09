@@ -30,6 +30,11 @@ AOS.init({
     anchorPlacement: 'top-bottom', // defines which position of the element regarding to window should trigger the animation
 })
 
+function scrolldown() {
+    document.querySelector("#main-2").scrollIntoView({
+        behavior: 'smooth'
+    });
+}
 
 
 

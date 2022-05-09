@@ -174,12 +174,16 @@
 }
 
 .main .right .sub-title h3 {
-  font-size: 1.8em;
+  font-size: 2em;
   margin-bottom: 10px;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .main .right .sub-title p {
   font-size: 1.5em;
+  line-height: 1.8em;
+  font-family: "Noto Sans TC", sans-serif;
+  font-weight: 300;
 }
 
 .main .right .more {
@@ -215,6 +219,8 @@
       -ms-flex-pack: center;
           justify-content: center;
   font-size: 5em;
+  text-align: center;
+  line-height: 1em;
 }
 
 .main-3 {
@@ -254,6 +260,7 @@
   text-align: center;
   position: relative;
   margin-top: 70px;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .main-3 .gallery .item .item-title::before {
@@ -322,10 +329,15 @@
   margin-bottom: 5%;
 }
 
+.main-4 .about .about-content {
+  min-width: 740px;
+}
+
 .main-4 .about .about-content p {
   font-size: 1.8em;
-  line-height: 1.4em;
+  line-height: 1.6em;
   margin-bottom: 30px;
+  font-family: "Noto Sans TC", sans-serif;
 }
 
 .main-4 .about .about-content .about-btn {
@@ -407,7 +419,9 @@
 
 .main-6 {
   min-height: 60vh;
-  background-color: #fff;
+  background-image: url("../img/bg-0.png");
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 100px 200px;
 }
 
@@ -432,6 +446,7 @@
   width: 100%;
   -webkit-box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
           box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+  border-radius: 5px;
 }
 
 .main-6 .photos .photo-top-title,
@@ -442,12 +457,12 @@
 }
 
 .main-6 .photos .photo-top-title {
-  top: 0;
+  top: -10px;
   left: -30px;
 }
 
 .main-6 .photos .photo-bottom-title {
-  bottom: 25px;
+  bottom: 15px;
   right: -30px;
 }
 

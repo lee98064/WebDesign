@@ -132,12 +132,16 @@
       margin-bottom: 20px;
 
       h3 {
-        font-size: 1.8em;
+        font-size: 2em;
         margin-bottom: 10px;
+        font-family: "Noto Sans TC", sans-serif;
       }
 
       p {
         font-size: 1.5em;
+        line-height: 1.8em;
+        font-family: "Noto Sans TC", sans-serif;
+        font-weight: 300;
       }
     }
 
@@ -168,6 +172,8 @@
   align-items: center;
   justify-content: center;
   font-size: 5em;
+  text-align: center;
+  line-height: 1em;
 }
 
 .main-3 {
@@ -201,6 +207,7 @@
         text-align: center;
         position: relative;
         margin-top: 70px;
+        font-family: "Noto Sans TC", sans-serif;
 
         &::before {
           content: "";
@@ -259,10 +266,13 @@
     }
 
     .about-content {
+      min-width: 740px;
+
       p {
         font-size: 1.8em;
-        line-height: 1.4em;
+        line-height: 1.6em;
         margin-bottom: 30px;
+        font-family: "Noto Sans TC", sans-serif;
       }
 
       .about-btn {
@@ -333,7 +343,10 @@
 
 .main-6 {
   min-height: 60vh;
-  background-color: #fff;
+  // background-color: #fff;
+  background-image: url('../img/bg-0.png');
+  background-repeat: no-repeat;
+  background-size: cover;
   padding: 100px 200px;
 
   .photos {
@@ -348,6 +361,7 @@
     img {
       width: 100%;
       box-shadow: 0 12px 12px rgba(0, 0, 0, 0.2);
+      border-radius: 5px;
     }
 
     .photo-top-title,
@@ -358,12 +372,12 @@
     }
 
     .photo-top-title {
-      top: 0;
+      top: -10px;
       left: -30px;
     }
 
     .photo-bottom-title {
-      bottom: 25px;
+      bottom: 15px;
       right: -30px;
     }
   }
