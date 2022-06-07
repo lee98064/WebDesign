@@ -1,5 +1,6 @@
 <script>
 import { getAssetsFile } from "./util/pub-use";
+import Header from "./components/Header.vue";
 export default {
   setup() {
     return { getAssetsFile };
@@ -7,6 +8,7 @@ export default {
   data() {
     return {
       nowIndex: 0,
+      nowImgIndex: 0,
       items: [
         {
           id: 0,
@@ -86,6 +88,7 @@ export default {
         return;
       }
       this.nowIndex += 1;
+      this.nowImgIndex = 0;
       document
         .getElementById(this.items[this.nowIndex].imgs[0].id)
         .scrollIntoView({
@@ -97,8 +100,8 @@ export default {
       if (this.nowIndex - 1 < 0) {
         return;
       }
-
       this.nowIndex -= 1;
+      this.nowImgIndex = 0;
       document
         .getElementById(this.items[this.nowIndex].imgs[0].id)
         .scrollIntoView({
@@ -106,37 +109,46 @@ export default {
           inline: "center",
         });
     },
+    nextAge() {
+      if (this.nowImgIndex + 1 > this.items[this.nowIndex].imgs.length - 1) {
+        return;
+      }
+      this.nowImgIndex += 1;
+    },
+    lastAge() {
+      if (this.nowImgIndex - 1 < 0) {
+        return;
+      }
+      this.nowImgIndex -= 1;
+    },
   },
+  components: { Header },
 };
 </script>
 
 <template>
-  <header class="header">
-    <h1 class="nav-title"><i class="fa-solid fa-cat"></i>Animal</h1>
-
-    <ul class="nav-item">
-      <li>貓咪</li>
-      <li>狗狗</li>
-      <li>兔子</li>
-    </ul>
-    <ul class="nav-func">
-      <li><i class="fa-solid fa-user"></i></li>
-      <li><i class="fa-solid fa-bag-shopping"></i></li>
-    </ul>
-  </header>
+  <Header></Header>
   <img src="./assets/circle.png" class="bg" alt="" />
 
   <div class="container">
     <ul class="img-list" id="img-list">
       <li></li>
       <li></li>
-      <li v-for="item in items" :key="item.id">
+      <li v-for="(item, itemIndex) in items" :key="item.id">
+        <img
+          :src="getAssetsFile(item.imgs[0].url)"
+          alt=""
+          :class="itemIndex != nowIndex ? '' : 'hidden'"
+        />
         <img
           :src="getAssetsFile(img.url)"
           alt=""
-          v-for="img in item.imgs"
+          v-for="(img, imgIndex) in item.imgs"
           :key="img.id"
           :id="img.id"
+          :class="
+            imgIndex == nowImgIndex && itemIndex == nowIndex ? '' : 'hidden'
+          "
         />
       </li>
       <li></li>
@@ -144,8 +156,10 @@ export default {
     </ul>
     <h1 class="info">{{ items[nowIndex].name }}</h1>
     <div class="func">
-      <button @click="last()">上一張</button>
-      <button @click="next()">下一張</button>
+      <button class="button" @click="lastAge()">上一年紀</button>
+      <button class="button" @click="last()">上一張</button>
+      <button class="button" @click="next()">下一張</button>
+      <button class="button" @click="nextAge()">下一年紀</button>
     </div>
   </div>
 </template>
