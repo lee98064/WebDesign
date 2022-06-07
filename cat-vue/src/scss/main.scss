@@ -3,9 +3,11 @@
 
 * {
   font-family: "Noto Sans TC", sans-serif;
+  box-sizing: border-box;
 }
 
 body {
+  position: relative;
   background-image: linear-gradient(
     to right top,
     #d16ba5,
@@ -22,6 +24,21 @@ body {
     #5ffbf1
   );
   height: 100vh;
+  .bg {
+    width: 25%;
+    position: absolute;
+    left: 50%;
+    top: 40%;
+    transform: translate(-50%, -50%);
+    opacity: 0.9;
+    z-index: -1;
+  }
+}
+
+#app {
+  height: 100%;
+  display: flex;
+  flex-direction: column;
 }
 
 .header {
@@ -47,5 +64,37 @@ body {
 }
 
 .container {
-  height: 100%;
+  // height: calc(100% - 109px);
+  flex-grow: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  // align-items: center;
+  // overflow-x: hidden;
+  & > .img-list {
+    margin-bottom: 50px;
+    display: flex;
+    align-items: center;
+    overflow-x: hidden;
+    & > li {
+      margin-right: 350px;
+      margin-left: 350px;
+      position: relative;
+      min-height: 300px;
+      & > img {
+        // min-height: 250px;
+        position: absolute;
+        left: 50%;
+        top: 50%;
+        transform: translate(-50%, -50%);
+        max-height: 300px;
+      }
+    }
+  }
+
+  .info {
+    text-align: center;
+    font-size: 4.5rem;
+    color: rgba(0, 0, 0, 0.6);
+  }
 }
