@@ -1,6 +1,7 @@
 <script>
 import { getAssetsFile } from "./util/pub-use";
 import Header from "./components/Header.vue";
+import Menu from "./components/Menu.vue";
 export default {
   setup() {
     return { getAssetsFile };
@@ -122,15 +123,15 @@ export default {
       this.nowImgIndex -= 1;
     },
   },
-  components: { Header },
+  components: { Header, Menu },
 };
 </script>
 
 <template>
   <Header></Header>
-  <img src="./assets/circle.png" class="bg" alt="" />
 
   <div class="container">
+    <img src="./assets/circle.png" class="bg" alt="" />
     <ul class="img-list" id="img-list">
       <li></li>
       <li></li>
@@ -162,4 +163,7 @@ export default {
       <button class="button" @click="nextAge()">下一年紀</button>
     </div>
   </div>
+  <div class="shadow one"></div>
+  <div class="shadow two"></div>
+  <Menu></Menu>
 </template>
