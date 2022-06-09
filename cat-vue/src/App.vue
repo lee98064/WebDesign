@@ -9,68 +9,55 @@ export default {
   data() {
     return {
       nowIndex: 0,
-      nowImgIndex: 0,
+      nowVideoStatus: false,
       items: [
         {
           id: 0,
           name: "波斯貓",
-          imgs: [
+          videos: [
             {
               id: "cat-1",
-              type: "幼年時",
-              url: "cat/1.png",
-            },
-            {
-              id: "cat-1-1",
-              type: "中年時",
-              url: "cat/1-1.png",
-            },
-            {
-              id: "cat-1-2",
-              type: "成年時",
-              url: "cat/1-2.png",
+              url: "cat/cat-1.webm",
             },
           ],
         },
         {
           id: 1,
           name: "波斯貓gg",
-          imgs: [
+          videos: [
             {
               id: "cat-2",
-              type: "幼年時",
-              url: "cat/2.png",
-            },
-            {
-              id: "cat-2-1",
-              type: "中年時",
-              url: "cat/2-1.png",
-            },
-            {
-              id: "cat-2-2",
-              type: "成年時",
-              url: "cat/2-2.png",
+              url: "cat/cat-2.webm",
             },
           ],
         },
         {
           id: 2,
           name: "波斯貓ggg",
-          imgs: [
+          videos: [
             {
               id: "cat-3",
-              type: "幼年時",
-              url: "cat/3.png",
+              url: "cat/cat-3.webm",
             },
+          ],
+        },
+        {
+          id: 3,
+          name: "波斯貓ggg",
+          videos: [
             {
-              id: "cat-3-1",
-              type: "中年時",
-              url: "cat/3-1.png",
+              id: "cat-4",
+              url: "cat/cat-4.webm",
             },
+          ],
+        },
+        {
+          id: 4,
+          name: "波斯貓ggg",
+          videos: [
             {
-              id: "cat-3-2",
-              type: "成年時",
-              url: "cat/3-2.png",
+              id: "cat-5",
+              url: "cat/cat-5.webm",
             },
           ],
         },
@@ -78,9 +65,18 @@ export default {
     };
   },
   mounted() {
-    document.getElementById(this.items[0].imgs[0].id).scrollIntoView({
+    document.getElementById(this.items[0].videos[0].id).scrollIntoView({
       behavior: "smooth",
       inline: "center",
+    });
+    this.items.forEach((item) => {
+      item.videos.forEach((video) => {
+        const videoEle = document.querySelector(`#${video.id}`);
+        videoEle.playbackRate = 2;
+        videoEle.addEventListener("ended", () => {
+          this.nowVideoStatus = false;
+        });
+      });
     });
   },
   methods: {
@@ -88,10 +84,10 @@ export default {
       if (this.nowIndex + 1 > this.items.length - 1) {
         return;
       }
+      this.nowVideoStatus = false;
       this.nowIndex += 1;
-      this.nowImgIndex = 0;
       document
-        .getElementById(this.items[this.nowIndex].imgs[0].id)
+        .getElementById(this.items[this.nowIndex].videos[0].id)
         .scrollIntoView({
           behavior: "smooth",
           inline: "center",
@@ -101,26 +97,29 @@ export default {
       if (this.nowIndex - 1 < 0) {
         return;
       }
+      this.nowVideoStatus = false;
       this.nowIndex -= 1;
-      this.nowImgIndex = 0;
       document
-        .getElementById(this.items[this.nowIndex].imgs[0].id)
+        .getElementById(this.items[this.nowIndex].videos[0].id)
         .scrollIntoView({
           behavior: "smooth",
           inline: "center",
         });
     },
     nextAge() {
-      if (this.nowImgIndex + 1 > this.items[this.nowIndex].imgs.length - 1) {
-        return;
-      }
-      this.nowImgIndex += 1;
+      this.nowVideoStatus = true;
     },
     lastAge() {
-      if (this.nowImgIndex - 1 < 0) {
-        return;
+      this.nowVideoStatus = false;
+    },
+  },
+  watch: {
+    nowVideoStatus(newValue, oldValue) {
+      if (newValue) {
+        document.getElementById(this.items[this.nowIndex].videos[0].id).play();
+      } else {
+        document.getElementById(this.items[this.nowIndex].videos[0].id).pause();
       }
-      this.nowImgIndex -= 1;
     },
   },
   components: { Header, Menu },
@@ -135,7 +134,16 @@ export default {
     <ul class="img-list" id="img-list">
       <li></li>
       <li></li>
-      <li v-for="(item, itemIndex) in items" :key="item.id">
+      <li v-for="item in items" :key="item.id">
+        <video
+          v-for="video in item.videos"
+          :key="video.id"
+          :id="video.id"
+          :src="getAssetsFile(video.url)"
+          muted
+        ></video>
+      </li>
+      <!-- <li v-for="(item, itemIndex) in items" :key="item.id">
         <img
           :src="getAssetsFile(item.imgs[0].url)"
           alt=""
@@ -151,7 +159,7 @@ export default {
             imgIndex == nowImgIndex && itemIndex == nowIndex ? '' : 'hidden'
           "
         />
-      </li>
+      </li> -->
       <li></li>
       <li></li>
     </ul>

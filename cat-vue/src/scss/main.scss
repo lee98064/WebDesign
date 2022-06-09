@@ -160,9 +160,9 @@ body {
       margin-right: 350px;
       margin-left: 350px;
       position: relative;
-      min-height: 300px;
-      & > img {
-        min-height: 150px;
+      min-height: 400px;
+      & > video {
+        min-height: 300px;
         position: absolute;
         left: 50%;
         top: 50%;
