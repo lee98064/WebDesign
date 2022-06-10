@@ -14,7 +14,7 @@ export default {
       items: [
         {
           id: 0,
-          name: "波斯貓",
+          name: "這是貓",
           videos: [
             {
               id: "cat-1",
@@ -28,7 +28,7 @@ export default {
         },
         {
           id: 1,
-          name: "波斯貓gg",
+          name: "還是貓",
           videos: [
             {
               id: "cat-2",
@@ -42,7 +42,7 @@ export default {
         },
         {
           id: 2,
-          name: "波斯貓ggg",
+          name: "貓貓貓",
           videos: [
             {
               id: "cat-3",
@@ -56,7 +56,7 @@ export default {
         },
         {
           id: 3,
-          name: "波斯貓ggg",
+          name: "反正就是貓",
           videos: [
             {
               id: "cat-4",
@@ -70,7 +70,7 @@ export default {
         },
         {
           id: 4,
-          name: "波斯貓ggg",
+          name: "知道我很可愛就對了",
           videos: [
             {
               id: "cat-5",
