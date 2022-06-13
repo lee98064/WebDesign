@@ -1,0 +1,79 @@
+.navbar {
+  position: fixed;
+  top: 30px;
+  left: 50%;
+  right: 0;
+  width: 100%;
+  z-index: 10;
+  background-color: rgba(40, 39, 45, 1);
+  transform: translateX(-50%);
+  width: 95%;
+  transition: all 0.3s;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+
+  & .menu {
+    height: 100%;
+    width: 100%;
+    padding: 10px 50px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: #fff;
+
+    & > .logo {
+      font-size: 1.1rem;
+      font-weight: 600;
+      text-transform: uppercase;
+      letter-spacing: 2px;
+      line-height: 4rem;
+    }
+
+    & > .hamburger-menu {
+      height: 4rem;
+      width: 3rem;
+      cursor: pointer;
+      display: flex;
+      align-items: center;
+      justify-content: flex-end;
+      & .bar {
+        width: 1.9rem;
+        height: 1.5px;
+        border-radius: 2px;
+        background-color: #eee;
+        transition: 0.5s;
+        position: relative;
+
+        &::before,
+        &::after {
+          content: "";
+          position: absolute;
+          width: inherit;
+          height: inherit;
+          background-color: #eee;
+          transition: 0.5s;
+        }
+
+        &::before {
+          transform: translateY(-9px);
+        }
+
+        &::after {
+          transform: translateY(9px);
+        }
+      }
+    }
+  }
+}
+
+.container.active .bar {
+  transform: rotate(360deg);
+  background-color: transparent;
+}
+
+.container.active .bar::before {
+  transform: translateY(0) rotate(45deg);
+}
+
+.container.active .bar::after {
+  transform: translateY(0) rotate(-45deg);
+}
