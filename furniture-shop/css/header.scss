@@ -8,7 +8,7 @@
   background-color: rgba(40, 39, 45, 1);
   transform: translateX(-50%);
   width: 95%;
-  transition: all 0.3s;
+  transition: all 0.4s;
   box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
 
   & .menu {
@@ -63,17 +63,4 @@
       }
     }
   }
-}
-
-.container.active .bar {
-  transform: rotate(360deg);
-  background-color: transparent;
-}
-
-.container.active .bar::before {
-  transform: translateY(0) rotate(45deg);
-}
-
-.container.active .bar::after {
-  transform: translateY(0) rotate(-45deg);
 }
