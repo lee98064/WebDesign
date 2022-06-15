@@ -1,0 +1,27 @@
+.navbar {
+  padding: 5px 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: #fff;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  .logo {
+    padding: 5px;
+    img {
+      width: 80%;
+    }
+  }
+
+  .navbar-list {
+    list-style: none;
+    display: flex;
+    .navbar-item {
+      display: block;
+      cursor: pointer;
+      font-weight: 600;
+      margin-left: 10px;
+      margin-right: 10px;
+      font-size: 1.2em;
+    }
+  }
+}
