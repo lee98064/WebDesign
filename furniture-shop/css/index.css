@@ -221,11 +221,49 @@ body {
 }
 .main-container .main3 {
   background-color: #fff;
+  display: flex;
 }
-.main-container .main3 .bg {
-  width: 70vw;
-  height: 70vh;
-  background-color: #e1d2cd;
+.main-container .main3 video {
+  height: 100vh;
+}
+.main-container .main3 .right {
+  position: absolute;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  width: 30%;
+  background-color: #ffff;
+  box-shadow: 0 12px 12px rgba(0, 0, 0, 0.1);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.main-container .main3 .right .info h1 {
+  font-size: 3em;
+  font-family: "Noto Sans TC", sans-serif;
+  margin-bottom: 30px;
+  color: #717171;
+}
+.main-container .main3 .right .info .text-center {
+  text-align: center;
+}
+.main-container .main3 .right .info p {
+  font-family: "Noto Sans TC", sans-serif;
+  font-size: 1.6em;
+  color: #707070;
+  line-height: 2.2em;
+}
+.main-container .main3 .right .info a {
+  text-decoration: none;
+  color: #707070;
+}
+.main-container .main3 .right .info .icon {
+  margin-top: 20px;
+}
+.main-container .main3 .right .info .icon a {
+  font-size: 3em;
+  margin-left: 10px;
+  margin-right: 10px;
 }
 .main-container .main-active {
   transform-origin: left;
