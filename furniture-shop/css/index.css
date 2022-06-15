@@ -143,8 +143,89 @@ body {
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.4em;
 }
-.main-container .main2, .main-container .main3 {
+.main-container .main2 {
   background-color: #fff;
+}
+.main-container .main2 .products {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  align-items: center;
+  height: 100vh;
+}
+.main-container .main2 .products .g1 {
+  padding: 30vh 5vh;
+  align-self: start;
+}
+.main-container .main2 .products .g1 h1 {
+  font-size: 3em;
+  color: #717171;
+  font-family: "Titillium Web", sans-serif;
+  margin-bottom: 30px;
+}
+.main-container .main2 .products .g1 p {
+  font-family: "Noto Sans TC", sans-serif;
+  line-height: 1.8em;
+  font-size: 1.4em;
+  color: #929292;
+  margin-bottom: 80px;
+}
+.main-container .main2 .products .g1 button {
+  height: 70px;
+  width: 70px;
+  background-color: #617791;
+  border-radius: 50%;
+  border: none;
+  color: #fff;
+  font-size: 25px;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.main-container .main2 .products .g1 button:hover {
+  background-color: #61779194;
+}
+.main-container .main2 .products .g2,
+.main-container .main2 .products .g3,
+.main-container .main2 .products .g4 {
+  padding: 10vh 10px 2vh 10px;
+  display: grid;
+  grid-template-rows: 3fr 1fr 1fr;
+  justify-content: center;
+  height: 100vh;
+}
+.main-container .main2 .products .g2 img,
+.main-container .main2 .products .g3 img,
+.main-container .main2 .products .g4 img {
+  width: 60%;
+  display: block;
+  margin: auto;
+}
+.main-container .main2 .products .g2 h1,
+.main-container .main2 .products .g3 h1,
+.main-container .main2 .products .g4 h1 {
+  font-size: 3em;
+  color: #717171;
+  text-align: center;
+  font-family: "Noto Sans TC", sans-serif;
+  align-self: center;
+}
+.main-container .main2 .products .g2 h3,
+.main-container .main2 .products .g3 h3,
+.main-container .main2 .products .g4 h3 {
+  font-family: "Titillium Web", sans-serif;
+  text-align: center;
+  font-size: 2.5em;
+  color: #707070;
+}
+.main-container .main2 .products .g2 {
+  background-color: #e8ecf2;
+}
+.main-container .main3 {
+  background-color: #fff;
+}
+.main-container .main3 .bg {
+  width: 70vw;
+  height: 70vh;
+  background-color: #e1d2cd;
 }
 .main-container .main-active {
   transform-origin: left;

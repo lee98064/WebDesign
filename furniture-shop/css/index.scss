@@ -167,9 +167,90 @@ body {
     }
   }
 
-  & .main2,
+  & .main2 {
+    background-color: #fff;
+
+    .products {
+      display: grid;
+      grid-template-columns: repeat(4, 1fr);
+      align-items: center;
+      height: 100vh;
+      .g1 {
+        padding: 30vh 5vh;
+        align-self: start;
+        h1 {
+          font-size: 3em;
+          color: #717171;
+          // text-align: center;
+          font-family: "Titillium Web", sans-serif;
+          // align-self: left;
+          margin-bottom: 30px;
+        }
+        p {
+          font-family: "Noto Sans TC", sans-serif;
+          line-height: 1.8em;
+          font-size: 1.4em;
+          color: #929292;
+          margin-bottom: 80px;
+        }
+        button {
+          // margin-left: 40px;
+          height: 70px;
+          width: 70px;
+          background-color: #617791;
+          border-radius: 50%;
+          border: none;
+          color: #fff;
+          font-size: 25px;
+          cursor: pointer;
+          transition: all 0.3s;
+          &:hover {
+            background-color: #61779194;
+          }
+        }
+      }
+      .g2,
+      .g3,
+      .g4 {
+        padding: 10vh 10px 2vh 10px;
+        display: grid;
+        grid-template-rows: 3fr 1fr 1fr;
+        justify-content: center;
+        // align-items: center;
+        height: 100vh;
+        img {
+          width: 60%;
+          display: block;
+          margin: auto;
+        }
+        h1 {
+          font-size: 3em;
+          color: #717171;
+          text-align: center;
+          font-family: "Noto Sans TC", sans-serif;
+          align-self: center;
+        }
+        h3 {
+          font-family: "Titillium Web", sans-serif;
+          text-align: center;
+          font-size: 2.5em;
+          color: #707070;
+        }
+      }
+
+      .g2 {
+        background-color: #e8ecf2;
+      }
+    }
+  }
   & .main3 {
     background-color: #fff;
+
+    .bg {
+      width: 70vw;
+      height: 70vh;
+      background-color: #e1d2cd;
+    }
   }
 
   .main-active {

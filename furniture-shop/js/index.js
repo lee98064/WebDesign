@@ -14,7 +14,7 @@ const delay = (s) => {
 
 $(document).ready(function () {
   $(".nav-menu li").click(async function (e) {
-    $(".main-container .main").each(function (index) {
+    $(".main-container .main").each(async function (index) {
       ele = $(this);
       ele.addClass("op0");
     });
@@ -49,5 +49,6 @@ $(document).ready(function () {
       ele = $(this);
       ele.removeClass("op0");
     });
+    container.classList.toggle("active");
   });
 });
