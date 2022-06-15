@@ -8,6 +8,10 @@
   box-sizing: border-box;
 }
 
+body {
+  height: 100vh;
+}
+
 .container {
   min-height: 100vh;
   width: 100%;
@@ -51,9 +55,12 @@
 .container.active .main-active:hover ~ .shadow.one {
   transform: perspective(1300px) rotateY(20deg) translateZ(230px) scale(0.5);
 }
+.container.active .op0 {
+  opacity: 0;
+}
 
 .main-container .main {
-  position: relative;
+  position: absolute;
   height: 100vh;
   width: 100%;
   top: 0;
@@ -154,7 +161,6 @@
   }
 }
 .shadow {
-  position: absolute !important;
   top: 0;
   left: 0;
   transform-style: preserve-3d;
