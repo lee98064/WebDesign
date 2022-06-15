@@ -42,7 +42,7 @@
 .container.active .navbar .bar::after {
   transform: translateY(0) rotate(-45deg);
 }
-.container.active .nav-menu a {
+.container.active .nav-menu li {
   animation: appear 0.5s forwards ease var(--i);
 }
 .container.active .main-active:hover {
@@ -136,7 +136,7 @@
   font-family: "Noto Sans TC", sans-serif;
   line-height: 1.4em;
 }
-.main-container .main5 {
+.main-container .main2, .main-container .main3 {
   background-color: #fff;
 }
 .main-container .main-active {
